@@ -7,10 +7,11 @@ const { validateTalk } = require('../middlewares/validateTalk');
 const { validateWatchedAt } = require('../middlewares/validateWatchedAt');
 const { validateRate } = require('../middlewares/validateRate');
 const { createTalker } = require('../middlewares/createTalker');
+const { editTalker } = require('../middlewares/editTalker');
 
 const talker = express.Router();
 
-talker.get('/', async (req, res) => {
+talker.get('/', async (_req, res) => {
     const talkers = await readFile();
     return res.status(200).json(talkers);
 });
@@ -27,13 +28,17 @@ talker.get('/:id', async (req, res) => {
     return res.status(200).json(talkerByID);
 });
 
-talker.post('/', 
+talker.use(
     authTalkerPost, 
     validateName, 
     validateAge, 
     validateTalk,
     validateWatchedAt,
     validateRate,
-    createTalker);
+);
+
+talker.post('/', createTalker);
+
+talker.put('/:id', editTalker);
 
 module.exports = talker;

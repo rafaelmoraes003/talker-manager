@@ -16,7 +16,7 @@ const createTalker = async (req, res) => {
         },
     };
     talkers.push(talkerObj);
-    await fs.writeFile('./talker.json', JSON.stringify(talkers));
+    await fs.writeFile('./talker.json', JSON.stringify(talkers, null, 2));
     return res.status(201).json(talkerObj);
 };
 
