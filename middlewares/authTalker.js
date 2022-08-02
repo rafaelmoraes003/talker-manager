@@ -1,4 +1,4 @@
-const authTalkerPost = (req, res, next) => {
+const authTalker = (req, res, next) => {
     const { authorization: token } = req.headers;
 
     if (!token) {
@@ -16,4 +16,4 @@ const authTalkerPost = (req, res, next) => {
     next();
 };
 
-module.exports = { authTalkerPost };
+module.exports = { authTalker };
