@@ -1,5 +1,4 @@
 const express = require('express');
-const { readFile } = require('../middlewares/readFile');
 const { authTalker } = require('../middlewares/authTalker');
 const { validateName } = require('../middlewares/validateName');
 const { validateAge } = require('../middlewares/validateAge');
@@ -10,27 +9,16 @@ const { createTalker } = require('../middlewares/createTalker');
 const { editTalker } = require('../middlewares/editTalker');
 const { deleteTalker } = require('../middlewares/deleteTalker');
 const { searchByName } = require('../middlewares/searchByName');
+const { getAllTalkers } = require('../middlewares/getAllTalkers');
+const { getTalkerById } = require('../middlewares/getTalkerById');
 
 const talker = express.Router();
 
-talker.get('/', async (_req, res) => {
-    const talkers = await readFile();
-    return res.status(200).json(talkers);
-});
+talker.get('/', getAllTalkers);
 
 talker.get('/search', authTalker, searchByName);
 
-talker.get('/:id', async (req, res) => {
-    const { id } = req.params;
-    const talkers = await readFile();
-    const talkerByID = talkers.find((t) => t.id === Number(id));
-    if (!talkerByID) {
-        return res.status(404).json({ 
-            message: 'Pessoa palestrante não encontrada',
-        });
-    }
-    return res.status(200).json(talkerByID);
-});
+talker.get('/:id', getTalkerById);
 
 talker.use(authTalker);
 
