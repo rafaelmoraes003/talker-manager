@@ -9,6 +9,7 @@ const { validateRate } = require('../middlewares/validateRate');
 const { createTalker } = require('../middlewares/createTalker');
 const { editTalker } = require('../middlewares/editTalker');
 const { deleteTalker } = require('../middlewares/deleteTalker');
+const { searchByName } = require('../middlewares/searchByName');
 
 const talker = express.Router();
 
@@ -16,6 +17,8 @@ talker.get('/', async (_req, res) => {
     const talkers = await readFile();
     return res.status(200).json(talkers);
 });
+
+talker.get('/search', authTalker, searchByName);
 
 talker.get('/:id', async (req, res) => {
     const { id } = req.params;
