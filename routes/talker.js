@@ -13,4 +13,21 @@ talker.get('/', async (req, res) => {
     }
 });
 
+talker.get('/:id', async (req, res) => {
+    const { id } = req.params;
+    
+    try {
+        const talkers = await readFile();
+        const talkerByID = talkers.find((t) => t.id === Number(id));
+        if (!talkerByID) {
+            return res.status(404).json({ 
+                message: 'Pessoa palestrante não encontrada',
+            });
+        }
+        return res.status(200).json(talkerByID);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
 module.exports = talker;
