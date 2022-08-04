@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">Este projeto buscou construir uma aplicação de cadastro de talkers (palestrantes) em que é possível cadastrar, visualizar, pesquisar, editar e excluir informações. Por isso, foram desenvolvidos uma API de um CRUD (Create, Read, Update e Delete) de palestrantes (talkers) e endpoints que leem e escrevem  em um arquivo utilizando o módulo fs do Node.js.</p>
+<p align="left">Projeto Talker Manager, que buscou construir uma aplicação de cadastro de talkers (palestrantes) em que é possível cadastrar, visualizar, pesquisar, editar e excluir informações. Para isso, foram desenvolvidos uma API de um CRUD (Create, Read, Update e Delete) de palestrantes (talkers) e endpoints com ExpressJS que leem e escrevem em um arquivo utilizando o módulo fs do Node.js.</p>
 
 ###
 
