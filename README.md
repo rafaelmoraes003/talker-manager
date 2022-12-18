@@ -25,3 +25,36 @@
 Clone the application using the `git clone` command. After that, enter the project folder using the `cd talker-manager` command and run the `npm install` command. After installation, use the `npm start` command and enter port `3000` in your browser.
 
 ###
+
+<h2 align="left">Endpoints</h2>
+
+###
+
+<h2 align="left">Talker</h2>
+
+| Method | Functionality | URL |
+|---|---|---|
+| `GET` | List all talkers | http://localhost:3001/talker |
+| `GET` | List a talker whose name includes the query string  | http://localhost:3001/talker?q |
+| `GET` | List a talker based on its id | http://localhost:3001/talker/:id |
+| `POST` | Create a new talker | http://localhost:3001/talker |
+| `DELETE` | Delete a talker based on its id | http://localhost:3001/talker/:id |
+| `PUT` | Update the informations about a talker based on its id | http://localhost:3001/talker/:id |
+
+###
+
+<h2 align="left">Login</h2>
+
+| Method | Functionality | URL |
+|---|---|---|
+| `POST` | Login and return an authentication token | http://localhost:3001/login |
+
+
+<h4 align="left">Requires an object in the following format:</h4>
+
+```JavaScript
+{
+  email: "username@email.com",
+  password: 123456
+}
+```
