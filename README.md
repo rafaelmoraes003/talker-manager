@@ -1,27 +1,27 @@
-<h1 align="left">Projeto Talker Manager</h1>
+<h1 align="left">Talker Manager</h1>
 
 ###
 
-<p align="left">Projeto Talker Manager, que buscou construir uma aplicação de cadastro de talkers (palestrantes) em que é possível cadastrar, visualizar, pesquisar, editar e excluir informações. Para isso, foram desenvolvidos uma API de um CRUD (Create, Read, Update e Delete) de palestrantes (talkers) e endpoints com ExpressJS que leem e escrevem em um arquivo utilizando o módulo fs do Node.js.</p>
+<p align="left">Talker Manager Project, which sought to build an application for registration of talkers (speakers) in which it is possible to register, view, search, edit and delete information. For this, an API was developed for a CRUD (Create, Read, Update and Delete) of speakers (talkers) and endpoints with ExpressJS that read and write in a file using the fs module of Node.js.</p>
 
 ###
 
-<h2 align="left">Tecnologias utilizadas</h2>
+<h2 align="left">Technologies used</h2>
 
 ###
 
 <div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" width="52" alt="javascript logo"  />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" width="52" alt="nodejs logo"  />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="40" width="52" alt="express logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="50" width="62" alt="javascript logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="50" width="62" alt="nodejs logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="50" width="62" alt="express logo"  />
 </div>
 
 ###
 
-<h2 align="left">Como utilizar a aplicação</h2>
+<h2 align="left">How to use the application</h2>
 
 ###
 
-Faça o clone da aplicação usando o comando `git clone`. Após isso, entre na pasta do projeto utilizando o comando `cd talker-manager` e rode o comando `npm install`. Após a instalação, utilize o comando `npm start` e entre na porta `3000` de seu navegador.
+Clone the application using the `git clone` command. After that, enter the project folder using the `cd talker-manager` command and run the `npm install` command. After installation, use the `npm start` command and enter port `3000` in your browser.
 
 ###
